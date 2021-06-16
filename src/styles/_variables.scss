@@ -1,0 +1,57 @@
+/** @format */
+//vairables
+
+$white: #ffffff;
+$primary-50: #d9e6fc;
+$primary-100: #b3cefa;
+$primary-150: #8db5f7;
+$primary-200: #669df4;
+$primary-250: #4084f2;
+$primary-300: #1a6cef;
+$primary-350: #0f59d2;
+$primary-400: #0c49ac;
+$primary-450: #093986;
+$primary-500: #07295f;
+$primary-550: #041839;
+$primary-600: #010813;
+$yellow-50: #fffceb;
+$yellow-100: #fff4ad;
+$yellow-200: #ffef85;
+$yellow-250: #ffe74c;
+$yellow-300: #ffe433;
+$yellow-350: #ffd30a;
+$yellow-400: #e0c200;
+$yellow-450: #b89f00;
+$yellow-500: #8f7c00;
+$yellow-550: #665800;
+$yellow-600: #3d3500;
+
+$transition: 0.4s all ease-in-out;
+$line-height: 1.5;
+$TitleletterSpacing: 0.3rem;
+$letterSpacing: 0.1rem;
+$borderRadius: 2rem;
+//mixins
+
+$breakpoints-up: (
+	"medium": "40em",
+	"large": "64em",
+	"xlarge": "87.5em",
+);
+$breakpoints-down: (
+	"small": "39.9375em",
+	"medium": "63.9375em",
+	"large": "87.4375em",
+);
+
+@mixin breakpoint-up($size) {
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}
+
+@mixin breakpoint-down($size) {
+	@media (max-width: map-get($breakpoints-down, $size)) {
+		@content;
+	}
+}
